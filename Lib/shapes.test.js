@@ -24,3 +24,13 @@ test('Returns SVG string with correct attributes for Circle', () => {
     expect(svgCircle).toEqual('<circle cx="50" cy="50" r="50" fill="blue" />');
   });
 
+  test('Returns SVG string with correct attributes for Square', () => {
+    // Arrange
+    const square = new Square(75, 'green');
+  
+    // Act
+    const svgSquare = square.render();
+  
+    // Assert
+    expect(svgSquare).toEqual('<rect width="75" height="75" fill="green" />');
+  });
