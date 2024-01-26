@@ -1,11 +1,12 @@
 class Triangle {
-  constructor(base, height) {
+  constructor(base, height, color) {
     this.base = base;
     this.height = height;
+    this.color = color;
   }
 
-  getArea() {
-    return 0.5 * this.base * this.height;
+  render() {
+    return `<polygon points="0,${this.height} ${this.base},${this.height} ${this.base / 2},0" fill="${this.color}" />`;
   }
 }
 
