@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-// const { createSVG } = require('./svgGenerator');
+const { createSVG } = require('./Lib/svgGenerator');
 
 async function promptUser() {
     try {
