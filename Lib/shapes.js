@@ -1,52 +1,12 @@
-const fs = require('fs');
-const inquirer = require('inquirer');
-const { createSVG } = require('./svgGenerator');
-
-async function promptUser() {
-    try {
-      const userInput = await inquirer.prompt([
-        {
-          type: 'input',
-          name: 'text',
-          message: 'Enter up to three letters for logo:',
-          validate: function (value) {
-            return value.length <= 3 ? true : 'Please enter up to three letters.';
-          }
-        },
-        {
-          type: 'input',
-          name: 'textColor',
-          message: 'Enter text color (keyword or hexadecimal number) for logo:'
-        },
-        {
-          type: 'list',
-          name: 'shape',
-          message: 'Choose a shape for the logo:',
-          choices: ['circle', 'triangle', 'square']
-        },
-        {
-          type: 'input',
-          name: 'shapeColor',
-          message: 'Enter shape color (keyword or hexadecimal number) for logo:'
-        }
-      ])
-      return userInput;
-    } catch (error) {
-      console.error('Error occurred while prompting user:', error);
-      throw error;
-    }
+class Triangle {
+  constructor(base, height) {
+    this.base = base;
+    this.height = height;
   }
 
-
-  async function createLogo() {
-    try {
-      const userInput = await promptUser();
-      createSVG(userInput.text, userInput.textColor, userInput.shape, userInput.shapeColor);
-    } catch (error) {
-      console.error('An error occurred:', error);
-    }
+  getArea() {
+    return 0.5 * this.base * this.height;
   }
-  
-  createLogo();
-  
-  module.exports = { promptUser };
+}
+
+module.exports = { Triangle, Circle, Square }
