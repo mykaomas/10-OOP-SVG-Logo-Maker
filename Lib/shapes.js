@@ -9,4 +9,24 @@ class Triangle {
   }
 }
 
-module.exports = { Triangle, Circle, Square }
+class Circle {
+  constructor(radius) {
+    this.radius = radius;
+  }
+
+  getArea() {
+    return Math.PI * this.radius ** 2;
+  }
+}
+
+class Square {
+  constructor(side) {
+    this.side = side;
+  }
+
+  getArea() {
+    return this.side ** 2;
+  }
+}
+
+module.exports = { Triangle, Circle, Square };
