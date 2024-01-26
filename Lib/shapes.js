@@ -22,12 +22,13 @@ class Circle {
 }
 
 class Square {
-  constructor(side) {
+  constructor(side, color) {
     this.side = side;
+    this.color = color;
   }
 
-  getArea() {
-    return this.side ** 2;
+  render() {
+    return `<rect width="${this.side}" height="${this.side}" fill="${this.color}" />`;
   }
 }
 
