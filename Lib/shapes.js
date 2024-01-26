@@ -11,12 +11,13 @@ class Triangle {
 }
 
 class Circle {
-  constructor(radius) {
+  constructor(radius, color) {
     this.radius = radius;
+    this.color = color;
   }
 
-  getArea() {
-    return Math.PI * this.radius ** 2;
+  render() {
+    return `<circle cx="${this.radius}" cy="${this.radius}" r="${this.radius}" fill="${this.color}" />`;
   }
 }
 
