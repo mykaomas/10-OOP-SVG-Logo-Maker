@@ -36,3 +36,17 @@ async function promptUser() {
       throw error;
     }
   }
+
+
+  async function createLogo() {
+    try {
+      const userInput = await promptUser();
+      createSVG(userInput.text, userInput.textColor, userInput.shape, userInput.shapeColor);
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
+  }
+  
+  createLogo();
+  
+  module.exports = { promptUser };
