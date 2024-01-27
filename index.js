@@ -41,7 +41,7 @@ async function promptUser() {
   async function createLogo() {
     try {
       const userInput = await promptUser();
-      createSVG(userInput.text, userInput.textColor, userInput.shape, userInput.shapeColor);
+      createSVG(userInput);
     } catch (error) {
       console.error('An error occurred:', error);
     }
