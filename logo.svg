@@ -1,0 +1,10 @@
+
+        <svg width="300" height="200">
+            <circle cx="50" cy="50" r="50" fill="purple" />
+            
+            <text x="8%" y="30%" font-size="5vh" fill="red">
+                CIR
+            </text>
+        
+        </svg>
+    
