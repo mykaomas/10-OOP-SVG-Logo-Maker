@@ -10,13 +10,13 @@ async function createLogo() {
 
     switch (userInput.shape) {
       case 'triangle':
-        shapeObject = new Triangle(userInput.shapeColor);
+        shapeObject = new Triangle(100, 50, userInput.shapeColor);
         break;
       case 'circle':
-        shapeObject = new Circle(userInput.shapeColor);
+        shapeObject = new Circle(userInput.text, userInput.textColor, userInput.shape, userInput.shapeColor);
         break;
       case 'square':
-        shapeObject = new Square(userInput.shapeColor);
+        shapeObject = new Square(userInput.text, userInput.textColor, userInput.shape, userInput.shapeColor);
         break;
       default:
         throw new Error('Invalid shape specified');
