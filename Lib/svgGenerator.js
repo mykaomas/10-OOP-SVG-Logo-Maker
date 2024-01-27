@@ -1,9 +1,6 @@
 const fs = require('fs');
 
 function createSVG(shapeObject) {
-    console.log("Type of shapeObject:", typeof shapeObject);
-    console.log("Shape Object:", shapeObject);
-
     let textElement = '';
     if (shapeObject.text && shapeObject.textColor) {
         textElement = `

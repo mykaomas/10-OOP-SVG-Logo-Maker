@@ -24,7 +24,7 @@ Then the program will prompt you to enter the following details:
 After providing the required information, the program generates an SVG file named logo.svg in the current directory, representing the logo based on the provided input.
 
 ## Demonstration
-Click the [link](https://drive.google.com/file/d/1kjQTov39uHnsqzC0j9-Zv6wHNv2PH1rV/view?usp=sharing) to see a demonstration of the program.
+Click the [link](https://drive.google.com/file/d/1QNCPQsG98gVeUJ9iMwojvW4G9zt4YXFy/view) to see a demonstration of the program.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
