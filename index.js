@@ -52,7 +52,7 @@ async function createLogo() {
                 shapeObject = new Circle(50, userInput.shapeColor);
                 break;
             case 'square':
-                shapeObject = new Square(75, userInput.shapeColor);
+                shapeObject = new Square(80, userInput.shapeColor);
                 break;
             default:
                 throw new Error('Invalid shape specified');

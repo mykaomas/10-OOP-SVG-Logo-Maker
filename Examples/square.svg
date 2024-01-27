@@ -1,0 +1,10 @@
+
+        <svg width="300" height="200">
+            <rect width="80" height="80" fill="#2d76f5" />
+            
+            <text x="8%" y="30%" font-size="5vh" fill="#1ca8f4">
+                SQU
+            </text>
+        
+        </svg>
+    

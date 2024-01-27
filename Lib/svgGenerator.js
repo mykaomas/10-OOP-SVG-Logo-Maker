@@ -7,7 +7,7 @@ function createSVG(shapeObject) {
     let textElement = '';
     if (shapeObject.text && shapeObject.textColor) {
         textElement = `
-            <text x="8%" y="28%" font-size="30px"fill="${shapeObject.textColor}">
+            <text x="8%" y="30%" font-size="5vh" fill="${shapeObject.textColor}">
                 ${shapeObject.text}
             </text>
         `;
