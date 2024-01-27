@@ -1,35 +1,21 @@
-// const { promptUser } = require('../index');
-// const { createSVG } = require('./svgGenerator');
-// const { Triangle, Circle, Square } = require('./shapes');
+const { Triangle, Circle, Square } = require('./Lib/shapes');
 
-// async function createLogo() {
-//   try {
-//     const userInput = await promptUser();
+describe('Shape rendering', () => {
+    test('Triangle render method', () => {
+        const triangle = new Triangle(100, 50, 'blue');
+        const expectedSVG = '<polygon points="0,50 100,50 50,0" fill="blue" />';
+        expect(triangle.render()).toEqual(expectedSVG);
+    });
 
-//     let shapeObject;
+    test('Circle render method', () => {
+        const circle = new Circle(50, 'red');
+        const expectedSVG = '<circle cx="50" cy="50" r="50" fill="red" />';
+        expect(circle.render()).toEqual(expectedSVG);
+    });
 
-//     switch (userInput.shape) {
-//       case 'triangle':
-//         shapeObject = new Triangle(100, 50, userInput.shapeColor);
-//         break;
-//       case 'circle':
-//         shapeObject = new Circle(50, userInput.shapeColor);
-//         break;
-//       case 'square':
-//         shapeObject = new Square(75, userInput.shapeColor);
-//         break;
-//       default:
-//         throw new Error('Invalid shape specified');
-//     }
-
-//     shapeObject.text = userInput.text;
-//     shapeObject.textColor = userInput.textColor;
-//     shapeObject.shapeColor = userInput.shapeColor;
-
-//     createSVG(shapeObject);
-//   } catch (error) {
-//     console.error('An error occurred:', error);
-//   }
-// }
-
-// createLogo();
+    test('Square render method', () => {
+        const square = new Square(75, 'green');
+        const expectedSVG = '<rect width="75" height="75" fill="green" />';
+        expect(square.render()).toEqual(expectedSVG);
+    });
+});
