@@ -58,7 +58,6 @@ async function createLogo() {
                 throw new Error('Invalid shape specified');
         }
 
-        // Set properties based on user input
         shapeObject.text = userInput.text;
         shapeObject.textColor = userInput.textColor;
         shapeObject.shapeColor = userInput.shapeColor;

@@ -1,4 +1,4 @@
-const { Triangle, Circle, Square } = require('./Lib/shapes');
+const { Triangle, Circle, Square } = require('./shapes');
 
 describe('Shape rendering', () => {
     test('Triangle render method', () => {
